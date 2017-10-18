@@ -1,13 +1,52 @@
-.jumbotron {
-    text-align: center;
-}
-.jumbo-left {
-    border-radius: 300px;
-    height: 200px;
-    width: 200px;
-    
+[data-target="#carousel"] {
+    cursor: pointer;    
 }
 
+.jumbotron {
+    text-align: center;
+    font-size: 25px;
+}
+#jumbo-img-left {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 235px;
+    width:235px;
+}
+#jumbo-img-right {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 235px;
+    width: 235px;
+}
+.desc {
+    margin-top: -105px;
+}
+.jaliyah {
+    margin-top: -60px;
+    font-size: 80px;
+}
+.dot {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px; 
+    background-color: #1a237e;
+    margin-top: px;
+    border: 0;
+}
+.Apply {
+    height: 100px;
+    width: 100px;
+}
+
+.modal-body {
+    margin: 0 auto;
+}
+.Learn {
+    height: 100px;
+    width: 100px;
+}
 .row {
     margin-left: 0;
     margin-right: 0;
@@ -49,4 +88,9 @@
 .carousel-control-next-icon {
     /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231a237e' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");*/
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+footer {
+    padding: 20px;
+    background-color: #1a237e;
 }
