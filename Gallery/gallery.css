@@ -1,10 +1,12 @@
+@import '../global.css';
+
 body, html {
     height: 100%;
     margin: 0;
 }
 
 .hero-image {
-  background-image: url("http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/1l/x8/p01lx8vj.jpg");
+  background-image: url("http://www.cattermoleconsulting.com/wp/wp-content/uploads/2015/03/indigo-830x250.jpg");
   background-color: green;
   height: 600px;
   background-position: center;
@@ -122,4 +124,11 @@ body, html {
     .modal-content {
         width: 100%;
     }
+}
+.e-images {
+    border-radius: 2%;
+    width: 300px;
+    height: auto;
+    float: left;
+    
 }
