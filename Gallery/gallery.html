@@ -2,23 +2,57 @@
 <html>
     <head>
         <title>Gallery</title>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         
-        <link rel="stylesheet" href="gallery.css" type="text/css"/>
+        <link rel="stylesheet" href="gallery.css" type="text/css" />
     </head>
-    <body>
-     
-      <footer>
-          <a href="mailto:jaliyahconsulting@gmail.com" class="fa fa-2x fa-envelope"></a>
-          <a href="https://facebook.com/jaliyahconsulting" class="fa fa-2x fa-facebook-official"></a>
-          <a href="https://twitter.com/jaliyahconsulting" class="fa fa-2x fa-twitter"></a>
-          <a href="https://snapchat.com/jaliyahconsulting" class="fa fa-2x fa-snapchat-ghost"></a>
-          <a href="https://instagram.com/jaliyahconsulting" class="fa fa-2x fa-instagram"></a>
-          <a href="https://youtube.com/jaliyahconsulting" class="fa fa-2x fa-youtube-play"></a>
-          <a href="https://plus.google.com/jaliyahconsulting" class="fa fa-2x fa-google-plus"></a>
-       </footer>
+    <body>      
+        <!--Hero Image-->
+        <!--This is the start of the gallery-->
+        
+            <div class="hero-image">
+              <div class="hero-text">
+                <h1 style="font-size:50px">This Image Looks Amazing</h1>
+                <p>And I'm a Photographer</p>
+              </div>
+            </div>
+        
+        <!--This is the end-->
+        
+        <img id="myImg" src="https://tse4.mm.bing.net/th?id=OIP.9UDK0QUUCIDGzt8lrJ71ZwEsCj&w=294&h=160&c=7&qlt=90&o=4&pid=1.7" alt="This is a placeholder!" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
     </body>
 </html>
