@@ -4,10 +4,14 @@
     height: 50px;
 }
 
-.form-image{
+.form {
+  text-align: center;
+}
+.form-image {
     margin: 0 auto;
     border-radius: 50%;
     width: 60%;
+    text-align: center;
 }
 
 form{
@@ -52,4 +56,21 @@ body, html {
 .hero-text button:hover {
   background-color: #555;
   color: white;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width : 767px) {
+  .reset {
+    margin-bottom: 5px;
+  }
+  .submit {
+    margin-top: 5px;
+  }
+}
+
+.input {
+  width: 50% !important;
 }

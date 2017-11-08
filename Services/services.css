@@ -25,9 +25,9 @@
 .jumbotron {
     margin-bottom: 0;
 }
-.nav {
-    margin-bottom: 20px;
-}
+/*.nav {*/
+/*    margin-bottom: 20px;*/
+/*}*/
 .nav-item .nav-link {
     border-radius: 0 !important;
 }
