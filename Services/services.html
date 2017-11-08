@@ -3,24 +3,60 @@
     <head>
         <title>Services</title>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="services.css" type="text/css" />
+        <script src="../hamburger.js"></script>
     </head>
     <body>
         <div id="container">
+            <!-- Nav Start -->
+             <nav id="nav-hamburger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <nav>
+                  <div id="nav-home">
+                    <a class="nav-link" href="../index.html">Jáliyah</a>
+                  </div>
+                  
+                  <ul class="nav" class="row">
+                    <a class="col-md nav-link" href="../About/about.html">About</a>
+                    <a class="col-md nav-link" href="../Contact/contact.html">Contact</a>
+                    <a class="col-md nav-link" href="../Gallery/gallery.html">Gallery</a>
+                    <a class="col-md nav-link" href="../Resources/resources.html">Resources</a>
+                    <a class="col-md nav-link" href="../Services/services.html">Services</a>
+                  </ul>
+                </nav>
+              </nav>
+              
+              <nav id="nav" class="nav" style="background-color: #1a237e;">
+                <div id="nav-home">
+                  <a class="nav-link" href="../index.html">Jáliyah</a>
+                </div>
+                
+                <div id="nav-others">
+                  <ul class="nav" class="row">
+                    <a class="col-md nav-link" href="../About/about.html">About</a>
+                    <a class="col-md nav-link" href="../Contact/contact.html">Contact</a>
+                    <a class="col-md nav-link" href="../Gallery/gallery.html">Gallery</a>
+                    <a class="col-md nav-link" href="../Resources/resources.html">Resources</a>
+                    <a class="col-md nav-link" href="../Services/services.html">Services</a>
+                  </ul>
+                </div>
+              </nav>
+              <!-- Nav End -->
+            
             <div id="header" class="jumbotron">
                 <h1>Services</h1>
             </div>
             
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="active nav-link" data-toggle="tab" href="#paid">Paid</a>
+                    <a class="active nav-link nav-swap" data-toggle="tab" href="#paid">Paid</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#free">Free</a>
+                    <a class="nav-link nav-swap" data-toggle="tab" href="#free">Free</a>
                 </li>
             </ul>
             
@@ -104,13 +140,16 @@
         </div>
         
         <footer>
-            <a href="mailto:jaliyahconsulting@gmail.com" class="fa fa-2x fa-envelope"></a>
-            <a href="https://facebook.com/jaliyahconsulting" class="fa fa-2x fa-facebook-official"></a>
-            <a href="https://twitter.com/jaliyahconsulting" class="fa fa-2x fa-twitter"></a>
-            <a href="https://snapchat.com/jaliyahconsulting" class="fa fa-2x fa-snapchat-ghost"></a>
-            <a href="https://instagram.com/jaliyahconsulting" class="fa fa-2x fa-instagram"></a>
-            <a href="https://youtube.com/jaliyahconsulting" class="fa fa-2x fa-youtube-play"></a>
-            <a href="https://plus.google.com/jaliyahconsulting" class="fa fa-2x fa-google-plus"></a>
+            <div class="misc"></div>
+            <div class="social-media">
+                <a href="mailto:jaliyahconsulting@gmail.com" class="fa fa-2x fa-envelope"></a>
+                <a href="https://facebook.com/jaliyahconsulting" class="fa fa-2x fa-facebook-official"></a>
+                <a href="https://twitter.com/jaliyahconsulting" class="fa fa-2x fa-twitter"></a>
+                <a href="https://snapchat.com/jaliyahconsulting" class="fa fa-2x fa-snapchat-ghost"></a>
+                <a href="https://instagram.com/jaliyahconsulting" class="fa fa-2x fa-instagram"></a>
+                <a href="https://youtube.com/jaliyahconsulting" class="fa fa-2x fa-youtube-play"></a>
+                <a href="https://plus.google.com/jaliyahconsulting" class="fa fa-2x fa-google-plus"></a>
+            </div>
         </footer>
     </body>
 </html>
