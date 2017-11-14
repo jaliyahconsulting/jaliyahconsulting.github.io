@@ -17,6 +17,9 @@
 }
 /* smaller screens */
 @media only screen and (max-width : 767px) {
+    .service-img-container * {
+        height: 200px;
+    }
     .nav-swap {
         background-color: white;
     }
@@ -25,13 +28,19 @@
 .jumbotron {
     margin-bottom: 0;
 }
-/*.nav {*/
-/*    margin-bottom: 20px;*/
-/*}*/
+.nav-tabs {
+    margin-bottom: 20px !important;
+}
+
 .nav-item .nav-link {
     border-radius: 0 !important;
 }
-
+.nav-link {
+    border-color: #e9ecef #e9ecef #ddd !important;
+}
+.active {
+    border-bottom-color: white !important;
+}
 .nav-swap {
     color: #1a237e;
 	-webkit-box-shadow: none !important;

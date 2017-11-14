@@ -62,7 +62,8 @@ html {
 
 
  .hero-image {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqu8NpjziRmPyxY1JDxKalQUOsMrV4WSfwjeeIeZjas9b_4UNP");
+   background-color: #E9ECF0;
+  /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqu8NpjziRmPyxY1JDxKalQUOsMrV4WSfwjeeIeZjas9b_4UNP");*/
   height: 450px;
   background-position: center;
   background-repeat: no-repeat;

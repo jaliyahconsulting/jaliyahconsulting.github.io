@@ -25,7 +25,8 @@ body, html {
 }
 
 .hero-image {
-  background-image: url("http://techsytalk.com/wp-content/uploads/2015/04/busy-street.jpg");
+  /*background-image: url("http://techsytalk.com/wp-content/uploads/2015/04/busy-street.jpg");*/
+  background-image: url("../images/NOPA-mass-meeting.jpg");
   height: 450px;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,4 +74,8 @@ body, html {
 
 .input {
   width: 50% !important;
+}
+
+.jumbotron {
+  padding: 32px;
 }

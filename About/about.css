@@ -10,7 +10,7 @@ h1 {
 }
 
 .hero-image {
-  background-image: url("http://crmtipoftheday.com/wp-content/uploads/2016/10/unstable-rocks.jpg");
+  background-image: url("../images/wendi-at-home.jpg");
   height: 450px;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,4 +41,9 @@ h1 {
 .hero-text button:hover {
   background-color: #555;
   color: white;
+}
+
+
+.jaliyah-africa {
+  margin: 20px 0 20px 0;
 }

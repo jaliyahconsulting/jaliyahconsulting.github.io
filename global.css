@@ -1,6 +1,6 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Merienda+One|Lato");
+@import url("https://fonts.googleapis.com/css?family=Merienda+One|Lato|Yeseva+One|Open+Sans");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
 
 html, body {
@@ -11,6 +11,19 @@ body {
   position: relative;
   margin: 0;
   min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Yeseva One', cursive;
+}
+
+p, li, span {
+  font-family: 'Open Sans', cursive;
 }
 
 .test-img {
@@ -34,6 +47,7 @@ body {
 .btn-outline-primary:active,
 .btn-outline-primary:focus {
   background-color: #1a237e;
+  color: white;
 }
 
 .btn-primary {
