@@ -1,0 +1,28 @@
+{
+  "name": "jaliyah_consulting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "p": "pug src/pages -o ./",
+    "s": "stylus src/css -o ./",
+    "dev:p": "npm run p -- -P -w",
+    "dev:s": "npm run s -- -w",
+    "build": "npm run p && npm run s -- -c",
+    "clean": "rm -f *.css *.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.8",
+    "slick-carousel": "^1.8.1"
+  }
+}

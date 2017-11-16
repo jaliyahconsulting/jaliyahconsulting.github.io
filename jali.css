@@ -1,0 +1,8 @@
+.topview {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.topview span {
+  margin-top: -10px;
+}

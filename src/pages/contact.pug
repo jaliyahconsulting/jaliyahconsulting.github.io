@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Contact | Jáliyah Consulting
+    include ../templates/head
+    link(rel="stylesheet", href="contact.css")
+    script(src="scripts/contact.js")
+  body
+    .page
+      include ../templates/nav
+      .jumbotron.topview
+        h1 Contact
+        span Contact Jáliyah
+      .container
+        .submitted Thank you for contacting Jáliyah! We will get back to you soon.
+        form.form(action="mailto:jaliyahconsulting@gmail.com", method="post", enctype="text/plain")
+          .form-group
+            label First Name
+            input.form-control(type="text" name="first_name")
+
+          .form-group
+            label Last Name
+            input.form-control(type="text", name="last_name")
+
+          .form-group
+            label Phone Number
+            input.form-control(type="tel", name="phone_number")
+
+          .form-group
+            label Email
+            input.form-control(type="text", name="email")
+
+          .form-group
+            label Comment
+            textarea.form-control(type="text", name="comment")
+
+          .form-group.row
+            .col-md-6
+              button.btn.btn-primary.reset(type="reset") Reset
+            .col-md-6
+              button.btn.btn-primary.submit(type="submit") Submit
+    include ../templates/footer

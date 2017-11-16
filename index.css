@@ -1,120 +1,95 @@
-@import "./global.css";
-
-#BOOM{
-    margin-top: 50px;
-    text-align: center;
+.header {
+  text-align: center;
+  margin: 20px;
 }
-.title-underline{
-    text-decoration: underline;
+.header h1 {
+  font-size: 6rem;
+  font-family: 'Cookie', cursive;
 }
-.container-fluid {
-  padding: 0;
+.header blockquote {
+  font-family: 'Raleway', sans-serif;
 }
-
-/* Carousel */
-.carousel-slide {
+.carousel-item,
+.carousel-item img {
   width: 100%;
-   height: 600px; /* smallest  img*/
 }
-.carousel-slide img {
-  width: 100%;
-  /*height: auto;*/
-  height: 600px;
-}
-#carousel-slide-1 {
-/*  background-color: red;*/
-}
-#carousel-slide-2 {
-/*  background-color: orange;*/
-}
-#carousel-slide-3 {
-/*  background-color: #1a237e;*/
+.carousel-item {
+  overflow: hidden;
 }
 .carousel-slide-changer {
   cursor: pointer;
 }
-
-/* bigger screens */
-@media only screen and (min-width : 768px) {
-  #nav-hamburger {
-    display: none;
-  }
-  #jumbotron-header h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #jumbotron-header {
-    border-right: thick double #1a237e;
-    border-right-width: 1px;
-  }
-  #header-hr {
-    display: none;
-  }
-  #jumbotron-paragraph {
-    border-left: thick double #1a237e;
-    border-left-width: 1px;
+@media only screen and (min-width: 167px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 150px;
   }
 }
-
-/* smaller screens */
-@media only screen and (max-width : 767px) {
-  #jumbotron-jaliyah {
-    padding: 54px; 
-  }
-  #header-hr {
-    display: block;
-    /*border-color: #1a237e;*/
-    /*border-width: 2px;*/
-  }
-  #jumbotron-paragraph {
-    padding: 20px 50px 0 50px;
+@media only screen and (min-width: 267px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 210px;
   }
 }
-
-#jumbotron-jaliyah {
-  margin: 0;
+@media only screen and (min-width: 367px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 270px;
+  }
 }
-#jumbotron-header h1 {
-  padding: 10px;
-  text-align: center;
-  font-family: 'Merienda One', cursive;
-  font-size: 60px;
-  margin: 0;
+@media only screen and (min-width: 467px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 330px;
+  }
 }
-#jumbotron-paragraph {
-  margin: 0;
+@media only screen and (min-width: 567px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 390px;
+  }
 }
-#get-started {
-  margin: 0;
-  /*text-align: center;*/
-  padding: 40px;
+@media only screen and (min-width: 667px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 450px;
+  }
 }
-#get-started a {
-  font-size: 20px;
+@media only screen and (min-width: 767px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 510px;
+  }
 }
-
-#nav {
-  position: absolute;
+@media only screen and (min-width: 867px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 570px;
+  }
+}
+@media only screen and (min-width: 967px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 630px;
+  }
+}
+@media only screen and (min-width: 1067px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 690px;
+  }
+}
+.container {
+  margin-bottom: 15px;
+}
+.container .wendi {
+  margin-bottom: 15px;
+}
+.container .wendi img {
   width: 100%;
-  z-index: 5;
-  background-color: transparent;
+  height: auto;
 }
-
-#book-now:hover {
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
-}
-
-.info {
-  height: 100%;
-  text-align: initial;
-}
-
-.card-title {
-  text-align: center;
-}
-
-#ourwork-toggle ul {
-  text-align: left;
+.container .welcome {
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
 }

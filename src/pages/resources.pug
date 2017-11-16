@@ -1,0 +1,37 @@
+- var dSMTTLink = "https://www.amazon.com/Dont-Start-Me-Talking-Selected/dp/155936419X";
+
+doctype html
+html
+  head
+    title Resources | Jáliyah Consulting
+    include ../templates/head
+    link(rel="stylesheet", href="resources.css")
+  body
+    .page
+      include ../templates/nav
+      .jumbotron.topview
+        h1 Resources
+        span Jáliyah Resources
+      .resources
+        .dont-start-me-to-talking.card
+          .card-body
+            h4.card-title
+              a(href=dSMTTLink) Don't Start Me To Talking...
+            hr
+            .row
+              .col-md-4
+                div
+                  a(href=dSMTTLink)
+                    img(src="images/dont-start-me-to-talking.jpg", alt="Don't Start Me To Talking...")
+              .col-md-8
+                div
+                  p.card-text My father John O'Neal published the book&nbsp;
+                    i Let Your Little Light Shine
+                    span .
+        //- .let-your-little-light-shine.card
+        //-   .card-body
+        //-     h4.card-title
+        //-         a(href=) Let Your Little Light Shine
+        //-     hr
+        //-     p.card-text ...
+    include ../templates/footer

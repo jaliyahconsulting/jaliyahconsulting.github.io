@@ -1,0 +1,39 @@
+$primary-color = #1a237e
+
+.header
+  text-align center
+  margin 20px
+  h1
+    font-size 6rem
+    font-family 'Cookie', cursive
+  blockquote
+    font-family 'Raleway', sans-serif
+
+.carousel-item,
+.carousel-item img
+  width 100%
+.carousel-item
+  overflow hidden
+
+.carousel-slide-changer
+  cursor pointer
+
+screenSize = 167px
+pixelHeight = 150px
+for _ in (1..10)
+  @media only screen and (min-width: screenSize)
+    .carousel-item, .carousel-item img
+      height pixelHeight
+  screenSize += 100px
+  pixelHeight += 60px
+
+.container
+  margin-bottom 15px
+  .wendi
+    margin-bottom 15px
+    img
+      width 100%
+      height auto
+  .welcome
+    margin-bottom 20px
+    font-family 'Raleway', sans-serif
