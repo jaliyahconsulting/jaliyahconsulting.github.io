@@ -1,0 +1,143 @@
+$primary-color = #1a237e
+transitionBackground(time = 500)
+  transition background-color unit(time, ms)
+  -webkit-transition background-color unit(time, ms)
+boxShadow()
+  box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
+purpleToWhite(t = 500)
+  color #ffffff
+  transitionBackground(t)
+purpleToWhiteHover(t = 500)
+  color $primary-color !important
+  background-color #ffffff !important
+  boxShadow(t)
+  transitionBackground(t)
+
+.btn-primary
+  cursor pointer
+  background-color $primary-color
+  border-color $primary-color
+  purpleToWhite(200)
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary.active,
+.btn-primary.focus
+  border-color $primary-color
+  purpleToWhiteHover(200)
+
+html, body
+  height 100%
+body
+  position relative
+  margin 0
+  min-height 100%
+.page
+  min-height 90%
+
+.hamburger
+  display none
+  padding 15px
+  text-align center
+  cursor pointer
+  font-size 1.5em
+  purpleToWhite()
+.hamburger:hover
+  purpleToWhiteHover()
+.nav
+  .nav-item
+    flex auto
+  .nav-link
+    text-align center
+    font-family 'Raleway', sans-serif
+    purpleToWhite()
+  .nav-link:hover
+    purpleToWhiteHover()
+  .dropdown:hover .dropdown-menu
+    display block
+  .dropdown-menu
+    margin-top -.5px
+    background-color $primary-color
+    padding 0
+    border none
+    font-family 'Raleway', sans-serif
+    a
+      border-radius 0
+      display block
+      width 100%
+      text-align center
+
+@media only screen and (max-width: 767px)
+  .nav, .hamburger
+    display block
+  .nav
+    display none
+
+.footer
+  padding 15px
+  width 100%
+  .social-media
+    text-align right
+    .fa
+      margin 2px
+      text-decoration none
+
+.hamburger,
+.nav,
+.nav-link,
+.footer
+  background-color $primary-color
+
+.topview
+  text-align center
+  h1
+    font-family 'Cookie', cursive
+    font-size 5rem
+  span
+    font-family 'Raleway', sans-serif
+    display block
+    margin-top -20px
+
+.hover-img-container
+    position relative
+    cursor pointer
+    margin-bottom 10px
+    text-align center
+    img
+      width 100%
+      height auto
+      opacity 1
+      transition opacity 500ms
+      -webkit-transition opacity 500ms
+    .description
+      visibility hidden
+      position absolute
+      top 90%
+      bottom 0
+      left 0
+      right 0
+      color #ffffff
+      font-weight bolder
+      font-size 1.3rem
+      transition visibility 200ms
+      -webkit-transition visibility 200ms
+  .hover-img-container:hover .description
+    visibility visible
+  .hover-img-container:hover img
+    opacity .7
+
+transitionParagraph(time = 500)
+  transition padding unit(time, ms), border-left unit(time, ms)
+  -webkit-transition padding unit(time, ms), border-left unit(time, ms)
+.paragraphs
+  font-family 'Raleway', sans-serif
+  p
+    border-left none
+    padding 0
+    transitionParagraph()
+  p:hover,
+  p:active,
+  p:focus
+    border-left 1px solid $primary-color
+    padding 10px
+    transitionParagraph()

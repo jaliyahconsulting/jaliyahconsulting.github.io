@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Gallery | Jáliyah Consulting
+    include ../templates/head
+    link(rel="stylesheet", href="node_modules/slick-carousel/slick/slick.css")
+    link(rel="stylesheet", href="node_modules/slick-carousel/slick/slick-theme.css")
+    script(src="node_modules/slick-carousel/slick/slick.min.js")
+    link(rel="stylesheet", href="gallery.css")
+    script(src="scripts/gallery.js")
+  body
+    .page
+      include ../templates/nav
+      .jumbotron.topview
+        h1 Gallery
+        span Jáliyah Gallery
+      .container
+        //- .slider
+        //-   img(src="images/we-deserve-better.jpg")
+        //-   img(src="images/wendipreach.jpg")
+        //-   img(src="images/groupimg0.jpg")
+        //-   img(src="images/groupimg1.jpg")
+        .slider-nav
+          .imgs
+            img(src="images/we-deserve-better.jpg")
+            img(src="images/wendipreach.jpg")
+            img(src="images/groupimg0.jpg")
+            img(src="images/groupimg1.jpg")
+    include ../templates/footer
