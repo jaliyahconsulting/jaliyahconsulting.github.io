@@ -5,6 +5,7 @@ const jáliyah = {
   },
   eventListeners() {
     $('.hamburger').click(() => $('.nav').slideToggle());
+    $('.nav-item.dropdown').click(() => window.location = 'about.html');
   }
 };
 

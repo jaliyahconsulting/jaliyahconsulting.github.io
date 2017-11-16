@@ -90,6 +90,7 @@ body
 
 .topview
   text-align center
+  border-radius 0
   h1
     font-family 'Cookie', cursive
     font-size 5rem
@@ -99,32 +100,40 @@ body
     margin-top -20px
 
 .hover-img-container
-    position relative
-    cursor pointer
-    margin-bottom 10px
-    text-align center
-    img
-      width 100%
-      height auto
-      opacity 1
-      transition opacity 500ms
-      -webkit-transition opacity 500ms
-    .description
-      visibility hidden
-      position absolute
-      top 90%
-      bottom 0
-      left 0
-      right 0
-      color #ffffff
-      font-weight bolder
-      font-size 1.3rem
-      transition visibility 200ms
-      -webkit-transition visibility 200ms
-  .hover-img-container:hover .description
-    visibility visible
-  .hover-img-container:hover img
-    opacity .7
+  position relative
+  margin-bottom 10px
+  text-align center
+  img
+    width 100%
+    height auto
+    opacity 1
+    transition opacity 500ms
+    -webkit-transition opacity 500ms
+  .description
+    margin-bottom 40px
+    visibility hidden
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    background-color black
+    padding 5px
+    color #ffffff
+    font-weight bolder
+    font-size 1.3rem
+    transition visibility 100ms
+    -webkit-transition visibility 100ms
+    .credit
+      font-style italic
+    .credit:before
+      content 'Photo Credit: '
+      font-size 1.2rem
+.hover-img-container:hover .description
+  visibility visible
+  transition visibility 500ms
+    -webkit-transition visibility 500ms
+.hover-img-container:hover img
+  opacity .7
 
 transitionParagraph(time = 500)
   transition padding unit(time, ms), border-left unit(time, ms)
@@ -132,6 +141,7 @@ transitionParagraph(time = 500)
 .paragraphs
   font-family 'Raleway', sans-serif
   p
+    font-size 1.05rem
     border-left none
     padding 0
     transitionParagraph()
