@@ -1,0 +1,20 @@
+#carousel.carousel.slide(data-ride="carousel")
+  ol.carousel-indicators
+    li.active.carousel-slide-changer(data-target="#carousel" data-slide-to="0")
+    li.carousel-slide-changer(data-target="#carousel" data-slide-to="1")
+    li.carousel-slide-changer(data-target="#carousel" data-slide-to="2")
+
+  .carousel-inner
+    .active.carousel-item
+      img(src="images/wendi-preach.jpg")
+    .carousel-item
+      img(src="images/groupimg1.jpg")
+    .carousel-item
+      img(src="images/groupimg0.jpg")
+
+  a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
+    span.carousel-control-prev-icon(aria-hidden="true")
+    span.sr-only Previous
+  a.carousel-control-next(href="#carousel" role="button" data-slide="next")
+    span.carousel-control-next-icon(aria-hidden="true")
+    span.sr-only Next

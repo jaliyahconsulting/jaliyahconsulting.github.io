@@ -1,0 +1,120 @@
+@import "./global.css";
+
+#BOOM{
+    margin-top: 50px;
+    text-align: center;
+}
+.title-underline{
+    text-decoration: underline;
+}
+.container-fluid {
+  padding: 0;
+}
+
+/* Carousel */
+.carousel-slide {
+  width: 100%;
+   height: 600px; /* smallest  img*/
+}
+.carousel-slide img {
+  width: 100%;
+  /*height: auto;*/
+  height: 600px;
+}
+#carousel-slide-1 {
+/*  background-color: red;*/
+}
+#carousel-slide-2 {
+/*  background-color: orange;*/
+}
+#carousel-slide-3 {
+/*  background-color: #1a237e;*/
+}
+.carousel-slide-changer {
+  cursor: pointer;
+}
+
+/* bigger screens */
+@media only screen and (min-width : 768px) {
+  #nav-hamburger {
+    display: none;
+  }
+  #jumbotron-header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #jumbotron-header {
+    border-right: thick double #1a237e;
+    border-right-width: 1px;
+  }
+  #header-hr {
+    display: none;
+  }
+  #jumbotron-paragraph {
+    border-left: thick double #1a237e;
+    border-left-width: 1px;
+  }
+}
+
+/* smaller screens */
+@media only screen and (max-width : 767px) {
+  #jumbotron-jaliyah {
+    padding: 54px; 
+  }
+  #header-hr {
+    display: block;
+    /*border-color: #1a237e;*/
+    /*border-width: 2px;*/
+  }
+  #jumbotron-paragraph {
+    padding: 20px 50px 0 50px;
+  }
+}
+
+#jumbotron-jaliyah {
+  margin: 0;
+}
+#jumbotron-header h1 {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Merienda One', cursive;
+  font-size: 60px;
+  margin: 0;
+}
+#jumbotron-paragraph {
+  margin: 0;
+}
+#get-started {
+  margin: 0;
+  /*text-align: center;*/
+  padding: 40px;
+}
+#get-started a {
+  font-size: 20px;
+}
+
+#nav {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  background-color: transparent;
+}
+
+#book-now:hover {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.info {
+  height: 100%;
+  text-align: initial;
+}
+
+.card-title {
+  text-align: center;
+}
+
+#ourwork-toggle ul {
+  text-align: left;
+}
