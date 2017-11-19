@@ -1,1 +1,104 @@
-.header{text-align:center;margin:20px;}.header h1{font-size:6rem;font-family:'Cookie',cursive}.header blockquote{font-size:1.05rem;font-family:'Raleway',sans-serif}.carousel-item,.carousel-item img{width:100%}.carousel-item{overflow:hidden}.carousel-slide-changer{cursor:pointer}@media only screen and (min-width:167px){.carousel-item,.carousel-item img{height:150px}}@media only screen and (min-width:267px){.carousel-item,.carousel-item img{height:210px}}@media only screen and (min-width:367px){.carousel-item,.carousel-item img{height:270px}}@media only screen and (min-width:467px){.carousel-item,.carousel-item img{height:330px}}@media only screen and (min-width:567px){.carousel-item,.carousel-item img{height:390px}}@media only screen and (min-width:667px){.carousel-item,.carousel-item img{height:450px}}@media only screen and (min-width:767px){.carousel-item,.carousel-item img{height:510px}}@media only screen and (min-width:867px){.carousel-item,.carousel-item img{height:570px}}@media only screen and (min-width:967px){.carousel-item,.carousel-item img{height:630px}}@media only screen and (min-width:1067px){.carousel-item,.carousel-item img{height:690px}}.container{margin-bottom:15px;}.container .wendi{margin-bottom:15px;}.container .wendi img{width:100%;height:auto}.container .welcome{margin-bottom:20px;font-family:'Raleway',sans-serif;}.container .welcome h2{font-size:2.3rem}.container .welcome p,.container .welcome span,.container .welcome ul{font-size:1.12rem}
+.header {
+  text-align: center;
+  margin: 20px;
+}
+.header h1 {
+  font-size: 6rem;
+  font-family: 'Cookie', cursive;
+}
+.header blockquote {
+  font-size: 1.05rem;
+  font-family: 'Raleway', sans-serif;
+}
+.carousel-item,
+.carousel-item img {
+  width: 100%;
+}
+.carousel-item {
+  overflow: hidden;
+}
+.carousel-slide-changer {
+  cursor: pointer;
+}
+@media only screen and (min-width: 167px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 267px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 210px;
+  }
+}
+@media only screen and (min-width: 367px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 270px;
+  }
+}
+@media only screen and (min-width: 467px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 330px;
+  }
+}
+@media only screen and (min-width: 567px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 390px;
+  }
+}
+@media only screen and (min-width: 667px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 450px;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 510px;
+  }
+}
+@media only screen and (min-width: 867px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 570px;
+  }
+}
+@media only screen and (min-width: 967px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 630px;
+  }
+}
+@media only screen and (min-width: 1067px) {
+  .carousel-item,
+  .carousel-item img {
+    height: 690px;
+  }
+}
+.container {
+  margin-bottom: 15px;
+}
+.container .wendi {
+  margin-bottom: 15px;
+}
+.container .wendi img {
+  width: 100%;
+  height: auto;
+}
+.container .welcome {
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+.container .welcome h2 {
+  font-size: 2.3rem;
+}
+.container .welcome p,
+.container .welcome span,
+.container .welcome ul {
+  font-size: 1.12rem;
+}
