@@ -10,6 +10,8 @@ const jáliyah = {
     $('.nav-item.dropdown').click(() => window.location = 'about.html');
   },
   dropDown() {
+    $('.dropdown').hover(() => $('.dropdown-menu').slideToggle('fast'));
+
     const resize = () => $('.dropdown-menu').css('width', $('.about-dropdown').css('width'));
     resize();
     $(window).resize(resize);
