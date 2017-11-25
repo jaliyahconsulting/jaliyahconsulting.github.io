@@ -1,13 +1,10 @@
 var $, Hammer;
 
-const throttle = (func, time) => {
-  let called = false;
-  return function (...args) {
-    if (!called) {
-      called = true;
-      setTimeout(() => called = false, time);
-      return func(...args);
-    }
+const debounce = (func, wait = 0) => {
+  let calling;
+  return (...args) => {
+    clearTimeout(calling);
+    calling = setTimeout(() => func(...args), wait);
   };
 };
 
@@ -84,8 +81,8 @@ const gallery = {
   gallerySwipe() {
     const gallery = new Hammer($('.imgs')[0]);
 
-    gallery.on('panleft', throttle(() => this.lastImg(), 200));
-    gallery.on('panright', throttle(() => this.nextImg(), 200));
+    gallery.on('panleft', debounce(() => this.lastImg(), 100));
+    gallery.on('panright', debounce(() => this.nextImg(), 100));
   },
 };
 
