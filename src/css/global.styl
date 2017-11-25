@@ -56,23 +56,31 @@ body
   .dropdown:hover .dropdown-menu
     display block
   .dropdown-menu
-    margin-top -.5px
+    border-radius 0
+    margin -.5px
     background-color $primary-color
     padding 0
     border none
+    min-width unset
+    max-width unset
     font-family 'Raleway', sans-serif
-    a
+    .nav-link
+      width inherit
       border-radius 0
       display block
-      width 100%
       text-align center
 
+@media only screen and (min-width : 768px)
+  .nav
+    display flex !important
+
 @media only screen and (max-width: 767px)
-  .nav, .hamburger
+  .hamburger
     display block
   .nav
     display none
     .dropdown-menu
+      width 100% !important
       margin-top 0
       position relative
       float none
