@@ -18,6 +18,23 @@ boxShadow()
         transform translateY(-50%)
     .hover-img-container
       display none
+      cursor pointer
+    .modal
+      .modal-content
+        img
+          width 100%
+          height auto
+        .description
+          font-family 'Raleway', sans-serif
+          font-size 20px
+          font-weight bolder
+          text-align center
+          padding 10px
+          .credit
+            font-style italic
+          .credit:before
+            content 'Photo Credit: '
+            font-size 1.2rem
     .current-img
       display block
       width 70%
@@ -30,7 +47,7 @@ boxShadow()
     margin 0 auto
     overflow scroll
     .bottom-current
-      border 1px dotted $primary-color
+      padding 10px
     .bottom-image
       height 100px
       margin-left 4px
