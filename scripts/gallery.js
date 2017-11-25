@@ -1,4 +1,15 @@
-var $;
+var $, Hammer;
+
+const throttle = (func, time) => {
+  let called = false;
+  return function (...args) {
+    if (!called) {
+      called = true;
+      setTimeout(() => called = false, time);
+      return func(...args);
+    }
+  };
+};
 
 const gallery = {
   init() {
@@ -6,6 +17,7 @@ const gallery = {
     this.arrows();
     this.galleryModals();
     this.bottomSelect();
+    this.gallerySwipe();
   },
   currImg: 0,
   changeImage(newImageIndex) {
@@ -18,23 +30,25 @@ const gallery = {
     $(`[data-index=${newImageIndex}]`).addClass('bottom-current');
     this.currImg = newImageIndex;
   },
+  lastImg() {
+    let changeTo = this.currImg;
+    if (this.currImg - 1 < 0) changeTo = this.imgs.length;
+    this.changeImage(changeTo - 1);
+  },
+  nextImg() {
+    let changeTo = this.currImg;
+    if (this.currImg + 1 >= this.imgs.length) changeTo = -1;
+    this.changeImage(changeTo + 1);
+  },
   arrows() {
     $('.last-img, .next-img').hover(
       function() { $(this).children('a').children('i').addClass('shake'); },
       function() { $(this).children('a').children('i').removeClass('shake'); }
     );
 
-    $('.last-img a').click(() => {
-      let changeTo = this.currImg;
-      if (this.currImg - 1 < 0) changeTo = this.imgs.length;
-      this.changeImage(changeTo - 1);
-    });
+    $('.last-img a').click(() => this.lastImg());
 
-    $('.next-img a').click(() => {
-      let changeTo = this.currImg;
-      if (this.currImg + 1 >= this.imgs.length) changeTo = -1;
-      this.changeImage(changeTo + 1);
-    });
+    $('.next-img a').click(() => this.nextImg());
   },
   galleryModals() {
     const modal = (e, id) => {
@@ -66,6 +80,12 @@ const gallery = {
       const index = $(this).attr('data-index');
       gallery.changeImage(Number(index));
     });
+  },
+  gallerySwipe() {
+    const gallery = new Hammer($('.imgs')[0]);
+
+    gallery.on('panleft', throttle(() => this.lastImg(), 200));
+    gallery.on('panright', throttle(() => this.nextImg(), 200));
   },
 };
 
