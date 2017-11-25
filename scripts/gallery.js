@@ -12,11 +12,18 @@ const gallery = {
     $(this.imgs[this.currImg]).removeClass('current-img');
     $(this.imgs[newImageIndex]).addClass('current-img');
 
+    $(this.imgs[newImageIndex]).addClass('animated fadeIn');
+
     $(`[data-index=${this.currImg}]`).removeClass('bottom-current');
     $(`[data-index=${newImageIndex}]`).addClass('bottom-current');
     this.currImg = newImageIndex;
   },
   arrows() {
+    $('.last-img, .next-img').hover(
+      function() { $(this).children('a').children('i').addClass('shake'); },
+      function() { $(this).children('a').children('i').removeClass('shake'); }
+    );
+
     $('.last-img a').click(() => {
       let changeTo = this.currImg;
       if (this.currImg - 1 < 0) changeTo = this.imgs.length;

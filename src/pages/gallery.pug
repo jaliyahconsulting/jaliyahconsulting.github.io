@@ -3,6 +3,7 @@ html
   head
     title Gallery | Jáliyah Consulting
     include ../templates/head
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
     link(rel="stylesheet", href="gallery.css")
     script(src="scripts/gallery.js")
   body
@@ -15,7 +16,7 @@ html
         .imgs
           .last-img
             a
-              i.fa.fa-2x.fa-arrow-left(aria-hidden="true")
+              i.animated.infinite.fa.fa-2x.fa-arrow-left(aria-hidden="true")
           .hover-img-container.current-img
             img(src="images/anti-trump-rally.jpg")
             .description Wendi, Thea Bashful, Rev. Dr. Denise Graves, Nana Anowa Nantambu, after singing at the New Orleans anti-Trump rally
@@ -81,7 +82,7 @@ html
             .description Officiating Heather and Christina's wedding
           .next-img
             a
-              i.fa.fa-2x.fa-arrow-right(aria-hidden="true")
+              i.animated.infinite.fa.fa-2x.fa-arrow-right(aria-hidden="true")
         .bottom-select
           .bottom-image.bottom-current.first-img
             img(src="images/anti-trump-rally.jpg")

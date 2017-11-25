@@ -16,10 +16,20 @@ boxShadow()
         position relative
         top 50%
         transform translateY(-50%)
+        i
+          animation-duration 5s
+    .last-img:hover,
+    .next-img:hover
+      color $primary-color
     .hover-img-container
       display none
       cursor pointer
     .modal
+      .modal-dialog
+        transform translate(0, 5%)
+        max-width unset
+        width 85%
+        boxShadow()
       .modal-content
         img
           width 100%
@@ -27,7 +37,6 @@ boxShadow()
         .description
           font-family 'Raleway', sans-serif
           font-size 20px
-          font-weight bolder
           text-align center
           padding 10px
           .credit
@@ -47,8 +56,13 @@ boxShadow()
     margin 0 auto
     overflow scroll
     .bottom-current
-      padding 10px
+      padding 10px !important
+      transition padding 500ms
+      -webkit-transition padding 500ms
     .bottom-image
+      padding 0px
+      transition padding 500ms
+      -webkit-transition padding 500ms
       height 100px
       margin-left 4px
       margin-right 4px
