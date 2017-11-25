@@ -13,7 +13,10 @@ html
         span Jáliyah Gallery
       .container(ontouchstart="")
         .imgs
-          .hover-img-container
+          .last-img
+            a
+              i.fa.fa-2x.fa-arrow-left(aria-hidden="true")
+          .hover-img-container.current-img
             img(src="images/anti-trump-rally.jpg")
             .description Wendi, Thea Bashful, Rev. Dr. Denise Graves, Nana Anowa Nantambu, after singing at the New Orleans anti-Trump rally
           .hover-img-container
@@ -76,4 +79,48 @@ html
           .hover-img-container
             img(src="images/wendi-preach.jpg")
             .description Officiating Heather and Christina's wedding
+          .next-img
+            a
+              i.fa.fa-2x.fa-arrow-right(aria-hidden="true")
+        .bottom-select
+          .bottom-image.bottom-current.first-img
+            img(src="images/anti-trump-rally.jpg")
+          .bottom-image
+            img(src="images/dont-start-me-to-talking.jpg")
+          .bottom-image
+            img(src="images/father-and-brother.jpg")
+          .bottom-image
+            img(src="images/groupimg0.jpg")
+          .bottom-image
+            img(src="images/groupimg1.jpg")
+          .bottom-image
+            img(src="images/jali.jpg")
+          .bottom-image
+            img(src="images/jaliyah-logo-fabrics-1.jpg")
+          .bottom-image
+            img(src="images/leading-story-circle-homecoming.jpg")
+          .bottom-image
+            img(src="images/leading-story-circle.jpg")
+          .bottom-image
+            img(src="images/NO-sheriff-protest.jpg")
+          .bottom-image
+            img(src="images/NOPA-mass-meeting.jpg")
+          .bottom-image
+            img(src="images/story-circle-freshgreen.jpg")
+          .bottom-image
+            img(src="images/we-deserve-better.jpg")
+          .bottom-image
+            img(src="images/wendi-and-father.jpg")
+          .bottom-image
+            img(src="images/wendi-at-home.png")
+          .bottom-image
+            img(src="images/wendi-father-1.jpg")
+          .bottom-image
+            img(src="images/wendi-serving.jpg")
+          .bottom-image
+            img(src="images/wendi-singing.jpg")
+          .bottom-image
+            img(src="images/wendi-superman.jpg")
+          .bottom-image.last-img
+            img(src="images/wendi-preach.jpg")
     include ../templates/footer
