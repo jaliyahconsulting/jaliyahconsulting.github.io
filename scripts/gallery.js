@@ -10,13 +10,44 @@ const debounce = (func, wait = 0) => {
 
 const gallery = {
   init() {
-    this.imgs = Array.from($('.hover-img-container'));
+    this.createImages();
     this.arrows();
     this.galleryModals();
     this.bottomSelect();
     this.gallerySwipe();
   },
   currImg: 0,
+  createImages() {
+    // gallery
+    this.images
+      .map(({ src, description, credit }) => {
+        const container = $('<div class="hover-img-container">');
+        const img = $(`<img src="${src}" />`);
+        const desc = $('<div class="description">').text(description);
+
+        if (credit) {
+          const cred = $('<div class="credit">').text(credit);
+          desc.append(cred);
+        }
+
+        return container.append(img).append(desc);
+      })
+      .map((c, i) => i === 0 ? c.addClass('current-img') : c)
+      .reverse()
+      .map(c => c.insertAfter('.imgs .last-img'));
+
+    // bottom select
+    this.images
+      .map(({ src }) => {
+        const container = $('<div class="bottom-image">');
+        const img = $(`<img src="${src}" />`);
+        return container.append(img);
+      })
+      .map((c, i) => i === 0 ? c.addClass('bottom-current first-img') : c)
+      .map(c => $('.bottom-select').append(c));
+
+    this.imgs = Array.from($('.hover-img-container'));
+  },
   changeImage(newImageIndex) {
     $(this.imgs[this.currImg]).removeClass('current-img');
     $(this.imgs[newImageIndex]).addClass('current-img');
@@ -86,4 +117,9 @@ const gallery = {
   },
 };
 
-$(() => gallery.init());
+$(() => {
+  $.getJSON('resources/gallery.json', ({ images }) => {
+    gallery.images = images;
+    gallery.init();
+  });
+});
