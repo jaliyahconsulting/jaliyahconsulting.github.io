@@ -45,14 +45,16 @@ const gallery = {
     this.imgs = Array.from($('.hover-img-container'));
   },
   changeImage(newImageIndex) {
-    $(this.imgs[this.currImg]).removeClass('current-img');
-    $(this.imgs[newImageIndex]).addClass('current-img');
+    if (!this.inModal) {
+      $(this.imgs[this.currImg]).removeClass('current-img');
+      $(this.imgs[newImageIndex]).addClass('current-img');
 
-    $(this.imgs[newImageIndex]).addClass('animated fadeIn');
+      $(this.imgs[newImageIndex]).addClass('animated fadeIn');
 
-    $(`[data-index=${this.currImg}]`).removeClass('bottom-current');
-    $(`[data-index=${newImageIndex}]`).addClass('bottom-current');
-    this.currImg = newImageIndex;
+      $(`[data-index=${this.currImg}]`).removeClass('bottom-current');
+      $(`[data-index=${newImageIndex}]`).addClass('bottom-current');
+      this.currImg = newImageIndex;
+    }
   },
   lastImg() {
     let changeTo = this.currImg;
@@ -101,7 +103,8 @@ const gallery = {
       this.activeRegion.bind(el, 'tap', (event) =>
         $(`#modal-${i}`).modal('show')));
 
-    $('.current-img').click(() => this.inModal = true);
+    $('.hover-img-container').click(() => this.inModal = true);
+    $('.modal').on("hidden.bs.modal", () => this.inModal = false);
   },
   bottomSelect() {
     Array.from($('.bottom-image')).forEach((e, i) => $(e).attr('data-index', i));
