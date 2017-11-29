@@ -25,8 +25,8 @@ boxShadow()
       display none
       cursor pointer
       img
-        height 100%
-        width auto
+        // height 100%
+        // width auto
         pointer-events none
     .current-img
       display block
@@ -91,3 +91,13 @@ boxShadow()
   .hover-img-container img,
   .modal-content img
     pointer-events none
+
+screenSize = 150px
+imgsHeight = 50px
+for _ in (1..41)
+  @media only screen and (min-width: screenSize)
+    .imgs
+      height imgsHeight
+  screenSize += 20px
+  imgsHeight += 10px
+

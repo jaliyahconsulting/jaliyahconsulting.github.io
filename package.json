@@ -12,7 +12,7 @@
     "clean": "rm -f *.css *.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "cainwatson",
   "license": "MIT",
   "devDependencies": {
     "pug-cli": "^1.0.0-alpha6",
