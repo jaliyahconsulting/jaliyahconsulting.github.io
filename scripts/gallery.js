@@ -3,6 +3,7 @@ var $, ZingTouch;
 const gallery = {
   init(images) {
     this.images = images;
+    this.activeRegion = ZingTouch.Region($('.imgs')[0]);
 
     this.createImages();
     this.arrows();
@@ -96,6 +97,10 @@ const gallery = {
       .map((e, i) => e.attr('data-target', `#modal-${i}`))
       .map((e, i) => $('.imgs').append(modal(e, i)));
 
+    Array.from($('.hover-img-container')).forEach((el, i) =>
+      this.activeRegion.bind(el, 'tap', (event) =>
+        $(`#modal-${i}`).modal('show')));
+
     $('.current-img').click(() => this.inModal = true);
   },
   bottomSelect() {
@@ -111,9 +116,8 @@ const gallery = {
       return x <= around + range && x >= around - range;
     }
 
-    const activeRegion = ZingTouch.Region($('.imgs')[0]);
     const bindSwipe = (el) => {
-      activeRegion.bind(el, 'swipe', (event) => {
+      this.activeRegion.bind(el, 'swipe', (event) => {
         const direction = event.detail.data[0].currentDirection;
         if (isAround(direction, 180, 20)) { // 180 - left
           this.nextImg();
@@ -124,10 +128,6 @@ const gallery = {
     };
 
     Array.from($('.hover-img-container')).forEach(bindSwipe);
-
-    Array.from($('.hover-img-container')).forEach((el, i) =>
-      activeRegion.bind(el, 'tap', (event) =>
-        $(`#modal-${i}`).modal('show')));
   },
 };
 
