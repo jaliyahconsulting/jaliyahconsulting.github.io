@@ -90,6 +90,10 @@ boxShadow()
   .modal-content img
     pointer-events none
 
+@media only screen and (max-width: 767px)
+  .description
+    display none
+
 screenSize = 150px
 imgsHeight = 50px
 for _ in (1..41)
@@ -98,4 +102,5 @@ for _ in (1..41)
       height imgsHeight
   screenSize += 20px
   imgsHeight += 10px
+
 
