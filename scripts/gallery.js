@@ -1,4 +1,4 @@
-var $, Hammer;
+var $, ZingTouch;
 
 const debounce = (func, wait = 0) => {
   let calling;
@@ -112,10 +112,26 @@ const gallery = {
     });
   },
   gallerySwipe() {
-    const gallery = new Hammer($('.imgs')[0]);
+    Number.prototype.isAround = function isAround(n, range = 20) {
+      return this < n + range && this > n - range;
+    };
 
-    gallery.on('panleft', debounce(() => this.lastImg(), 100));
-    gallery.on('panright', debounce(() => this.nextImg(), 100));
+    const containerElement = $('.imgs')[0];
+    const activeRegion = ZingTouch.Region(containerElement);
+    Array.from($('.hover-img-container')).forEach((c) =>
+      activeRegion.bind(c, 'swipe', (event) => {
+        console.log('swipping');
+        const direction = event.detail.data[0].currentDirection;
+        if (direction.isAround(180)) { // 180 - left
+          // console.log('left');
+          this.nextImg();
+        } else if (direction.isAround(360)) { // 360 - right
+          // console.log('right');
+          this.lastImg();
+        } else {
+          // console.log(direction);
+        }
+      }));
   },
 };
 
