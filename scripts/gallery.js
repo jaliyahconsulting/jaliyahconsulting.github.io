@@ -9,7 +9,9 @@ const debounce = (func, wait = 0) => {
 };
 
 const gallery = {
-  init() {
+  init(images) {
+    this.images = images;
+
     this.createImages();
     this.arrows();
     this.galleryModals();
@@ -118,8 +120,5 @@ const gallery = {
 };
 
 $(() => {
-  $.getJSON('resources/gallery.json', ({ images }) => {
-    gallery.images = images;
-    gallery.init();
-  });
+  $.getJSON('resources/gallery.json', ({ images }) => gallery.init(images));
 });

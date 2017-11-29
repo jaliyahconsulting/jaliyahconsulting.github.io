@@ -1,12 +1,10 @@
-$primary-color = #1a237e
-boxShadow()
-  box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
+@import 'helpers.styl'
 
 .gallery
   margin 0 20px 32px 20px
   .imgs
     margin-bottom 12px
-    display flex
+    display-flex-vender()
     .last-img,
     .next-img
       text-align center
@@ -15,7 +13,7 @@ boxShadow()
         cursor pointer
         position relative
         top 50%
-        transform translateY(-50%)
+        transform-vender(translateY(-50%))
         i
           animation-duration 5s
     .last-img:hover,
@@ -31,10 +29,11 @@ boxShadow()
       width 70%
       overflow scroll
     .modal
+      width 100%
       left unset
       right unset
       .modal-dialog
-        transform translate(0, 5%)
+        transform-vender(translate(0, 5%))
         max-width unset
         width 85%
         boxShadow()
@@ -57,17 +56,15 @@ boxShadow()
             font-size 1.2rem
   .bottom-select
     boxShadow()
-    display flex
+    display-flex-vender()
     margin 0 auto
     overflow scroll
     .bottom-current
       padding 10px !important
-      transition padding 500ms
-      -webkit-transition padding 500ms
+      transition-vender(padding 500ms)
     .bottom-image
       padding 0px
-      transition padding 500ms
-      -webkit-transition padding 500ms
+      transition-vender(padding 500ms)
       height 100px
       margin-left 4px
       margin-right 4px
@@ -78,14 +75,9 @@ boxShadow()
       margin-left 0
     .last-img
       margin-right 0
-
   .hover-img-container img,
   .bottom-image
-    -khtml-user-select none
-    -o-user-select none
-    -moz-user-select none
-    -webkit-user-select none
-    user-select none
+    user-select-vender(none)
   .hover-img-container img,
   .modal-content img
     pointer-events none
@@ -102,5 +94,3 @@ for _ in (1..41)
       height imgsHeight
   screenSize += 20px
   imgsHeight += 10px
-
-

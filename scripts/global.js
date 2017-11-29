@@ -15,8 +15,8 @@ const dropDown = {
   },
   resize() {
     const resize = () => $('.dropdown-menu').css('width', $('.about-dropdown').css('width'));
-    resize();
     $(window).resize(resize);
+    resize();
   },
 };
 

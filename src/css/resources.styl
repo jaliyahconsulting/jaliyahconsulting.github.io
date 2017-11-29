@@ -1,3 +1,5 @@
+@import 'helpers.styl'
+
 .resources
   margin 0 auto
   width 85%
@@ -7,5 +9,11 @@
       height auto
   .card
     margin-bottom 15px
+    .card-title a
+      color $primary-color
     .card-title, .card-text
       font-family 'Raleway', sans-serif
+
+@media only screen and (max-width: 767px)
+  .card-text
+    margin-top 10px
