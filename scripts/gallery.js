@@ -11,6 +11,7 @@ const gallery = {
     this.gallerySwipe();
   },
   currImg: 0,
+  inModal: false,
   createImages() {
     // gallery
     this.images
@@ -94,6 +95,8 @@ const gallery = {
       .map(e => e.attr('data-toggle', 'modal'))
       .map((e, i) => e.attr('data-target', `#modal-${i}`))
       .map((e, i) => $('.imgs').append(modal(e, i)));
+
+    $('.current-img').click(() => this.inModal = true);
   },
   bottomSelect() {
     Array.from($('.bottom-image')).forEach((e, i) => $(e).attr('data-index', i));
@@ -121,6 +124,10 @@ const gallery = {
     };
 
     Array.from($('.hover-img-container')).forEach(bindSwipe);
+
+    Array.from($('.hover-img-container')).forEach((el, i) =>
+      activeRegion.bind(el, 'tap', (event) =>
+        $(`#modal-${i}`).modal('show')));
   },
 };
 
