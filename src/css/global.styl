@@ -43,7 +43,6 @@ body
 .hamburger:hover
   purpleToWhiteHover()
 .nav
-  // display flex
   .nav-item
     flex-vender(auto)
   .nav-link
@@ -87,13 +86,14 @@ body
       float none
 
 .footer
-  padding 15px
-  width 100%
-  .social-media
-    text-align right
-    .fa
-      margin 2px
-      text-decoration none
+    background-image url("images/jali.jpg")
+    padding 15px
+    width 100%
+    .social-media
+      text-align right
+      .fa
+        margin 2px
+        text-decoration none
 
 .hamburger,
 .nav,
@@ -150,6 +150,10 @@ transitionParagraph(time = 500ms)
   transition-vender(padding time, border-left time)
 .paragraphs
   font-family 'Raleway', sans-serif
+  h2
+    padding 20px
+    background-color $primary-color
+    color #fff
   p
     font-size 1.05rem
     border-left none
