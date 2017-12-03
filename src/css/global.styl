@@ -42,35 +42,37 @@ body
   purpleToWhite()
 .hamburger:hover
   purpleToWhiteHover()
-.nav
-  .nav-item
-    flex-vender(auto)
-  .nav-link
-    text-align center
-    font-family 'Raleway', sans-serif
-    purpleToWhite()
-  .nav-link:hover
-    purpleToWhiteHover()
-  .dropdown-menu
-    border-radius 0
-    margin -0.5px
-    background-color $primary-color
-    padding 0
-    border none
-    min-width unset
-    max-width unset
-    font-family 'Raleway', sans-serif
+.nav-container
+  line-height 2.5rem
+  .nav
+    .nav-item
+      flex-vender(auto)
     .nav-link
-      background-color $secondary-color !important
-      width inherit
-      border-radius 0
-      display block
       text-align center
+      font-family 'Raleway', sans-serif
+      purpleToWhite()
     .nav-link:hover
-      background-color #ffffff !important
-      color $primary-color !important
+      purpleToWhiteHover()
+    .dropdown-menu
+      border-radius 0
+      margin -0.5px
+      padding 0
+      border none
+      min-width unset
+      max-width unset
+      font-family 'Raleway', sans-serif
+      .nav-link
+        width inherit
+        border-radius 0
+        display block
+        text-align center
+      .nav-link:hover
+        background-color #ffffff !important
+        color $primary-color !important
 
 @media only screen and (min-width: 768px)
+  .dropdown-menu
+    logoFabrics()
   .nav
     display-flex-vender(true)
 
@@ -86,20 +88,13 @@ body
       float none
 
 .footer
-    background-image url("images/jali.jpg")
-    padding 15px
-    width 100%
-    .social-media
-      text-align right
-      .fa
-        margin 2px
-        text-decoration none
-
-.hamburger,
-.nav,
-.nav-link,
-.footer
-  background-color $primary-color
+  padding 15px
+  width 100%
+  .social-media
+    text-align right
+    .fa
+      margin 2px
+      text-decoration none
 
 .topview
   text-align center
@@ -165,3 +160,10 @@ transitionParagraph(time = 500ms)
     border-left 1px solid $primary-color
     padding 10px
     transitionParagraph()
+
+.nav-container,
+.footer
+  logoFabrics()
+
+.dropdown-menu
+  background-color unset
