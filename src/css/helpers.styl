@@ -43,6 +43,20 @@ boxShadow()
   -webkit-box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
   box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
 
+transitionBackground(time = 500ms)
+  transition-vender(background-color time)
+transitionParagraph(time = 500ms)
+  transition-vender(padding time, border-left time)
+
+toWhite(t = 500ms)
+  color #ffffff
+  transitionBackground(t)
+toWhiteHover(t = 500ms)
+  color $primary-color !important
+  background-color #ffffff !important
+  boxShadow(t)
+  transitionBackground(t)
+
 logoFabrics()
   background-image url('images/jaliyah-logo-fabrics-long.png')
   background-repeat no-repeat

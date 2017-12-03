@@ -1,29 +1,5 @@
 @import 'helpers.styl'
 
-transitionBackground(time = 500ms)
-  transition-vender(background-color time)
-purpleToWhite(t = 500ms)
-  color #ffffff
-  transitionBackground(t)
-purpleToWhiteHover(t = 500ms)
-  color $primary-color !important
-  background-color #ffffff !important
-  boxShadow(t)
-  transitionBackground(t)
-
-.btn-primary
-  cursor pointer
-  background-color $primary-color
-  border-color $primary-color
-  purpleToWhite(200ms)
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary.active,
-.btn-primary.focus
-  border-color $primary-color
-  purpleToWhiteHover(200ms)
-
 html, body
   height 100%
 body
@@ -32,80 +8,33 @@ body
   min-height 100%
 .page
   min-height 90%
-
-.hamburger
-  display none
-  padding 15px
-  text-align center
-  cursor pointer
-  font-size 1.5em
-  purpleToWhite()
-.hamburger:hover
-  purpleToWhiteHover()
-.nav-container
-  line-height 2.5rem
-  .nav
-    .nav-item
-      flex-vender(auto)
-    .nav-link
-      text-align center
+  .topview
+    text-align center
+    border-radius 0
+    h1
+      font-family 'Cookie', cursive
+      font-size 5rem
+    span
       font-family 'Raleway', sans-serif
-      purpleToWhite()
-    .nav-link:hover
-      purpleToWhiteHover()
-    .dropdown-menu
-      border-radius 0
-      margin -0.5px
-      padding 0
-      border none
-      min-width unset
-      max-width unset
-      font-family 'Raleway', sans-serif
-      .nav-link
-        width inherit
-        border-radius 0
-        display block
-        text-align center
-      .nav-link:hover
-        background-color #ffffff !important
-        color $primary-color !important
-
-@media only screen and (min-width: 768px)
-  .dropdown-menu
-    logoFabrics()
-  .nav
-    display-flex-vender(true)
-
-@media only screen and (max-width: 767px)
-  .hamburger
-    display block
-  .nav
-    display none
-    .dropdown-menu
-      width 100% !important
-      margin-top 0
-      position relative
-      float none
-
-.footer
-  padding 15px
-  width 100%
-  .social-media
-    text-align right
-    .fa
-      margin 2px
-      text-decoration none
-
-.topview
-  text-align center
-  border-radius 0
-  h1
-    font-family 'Cookie', cursive
-    font-size 5rem
-  span
+      display block
+      margin-top -20px
+  .paragraphs
     font-family 'Raleway', sans-serif
-    display block
-    margin-top -20px
+    h2
+      padding 20px
+      background-color $primary-color
+      color #fff
+    p
+      font-size 1.05rem
+      border-left none
+      padding 0
+      transitionParagraph()
+    p:hover,
+    p:active,
+    p:focus
+      border-left 1px solid $primary-color
+      padding 10px
+      transitionParagraph()
 
 .hover-img-container
   position relative
@@ -135,35 +64,91 @@ body
     .credit:before
       content 'Photo Credit: '
       font-size 1.2rem
-.hover-img-container:hover .description
-  visibility visible
-  transition-vender(visibility 500ms)
-.hover-img-container:hover img
-  opacity .7
+.hover-img-container:hover
+  .description
+    visibility visible
+    transition-vender(visibility 500ms)
+  img
+    opacity .7
 
-transitionParagraph(time = 500ms)
-  transition-vender(padding time, border-left time)
-.paragraphs
-  font-family 'Raleway', sans-serif
-  h2
-    padding 20px
-    background-color $primary-color
-    color #fff
-  p
-    font-size 1.05rem
-    border-left none
-    padding 0
-    transitionParagraph()
-  p:hover,
-  p:active,
-  p:focus
-    border-left 1px solid $primary-color
-    padding 10px
-    transitionParagraph()
+.btn-primary
+  cursor pointer
+  background-color $primary-color
+  border-color $primary-color
+  toWhite(200ms)
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary.active,
+.btn-primary.focus
+  border-color $primary-color
+  toWhiteHover(200ms)
+
+// nav
+.nav-container
+  line-height 2.5rem
+  .hamburger
+    display none
+    padding 15px
+    text-align center
+    cursor pointer
+    font-size 1.5em
+    toWhite()
+  .hamburger:hover
+    toWhiteHover()
+  .nav
+    .nav-item
+      flex-vender(auto)
+    .nav-link
+      text-align center
+      font-family 'Raleway', sans-serif
+      toWhite()
+    .nav-link:hover
+      toWhiteHover()
+    .dropdown-menu
+      background-color unset
+      border-radius 0
+      margin -0.5px
+      padding 0
+      border none
+      min-width unset
+      max-width unset
+      font-family 'Raleway', sans-serif
+      .nav-link
+        width inherit
+        border-radius 0
+        display block
+        text-align center
+      .nav-link:hover
+        background-color #ffffff !important
+        color $primary-color !important
+@media only screen and (min-width: 768px)
+  .dropdown-menu
+    logoFabrics()
+  .nav
+    display-flex-vender(true)
+@media only screen and (max-width: 767px)
+  .hamburger
+    display block
+  .nav
+    display none
+    .dropdown-menu
+      width 100% !important
+      margin-top 0
+      position relative
+      float none
+
+// footer
+.footer
+  padding 15px
+  width 100%
+  .social-media
+    text-align right
+    .fa
+      color #fff
+      margin 2px
+      text-decoration none
 
 .nav-container,
 .footer
   logoFabrics()
-
-.dropdown-menu
-  background-color unset
