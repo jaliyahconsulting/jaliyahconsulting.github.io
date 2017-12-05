@@ -10,23 +10,21 @@
     font-size 1.05rem
     font-family 'Raleway', sans-serif
 
-.carousel-item,
-.carousel-item img
-  width 100%
-.carousel-item
-  overflow hidden
-
-.carousel-slide-changer
-  cursor pointer
-
-screenSize = 167px
-pixelHeight = 150px
-for _ in (1..10)
-  @media only screen and (min-width: screenSize)
-    .carousel-item, .carousel-item img
-      height pixelHeight
-  screenSize += 100px
-  pixelHeight += 60px
+#carousel
+  // background-color $primary-color
+  .carousel-slide-changer
+    cursor pointer
+  .carousel-item
+    text-align center
+    // img
+    //   width 100%
+  .carousel-control-prev,
+  .carousel-control-next
+    width 10%
+    opacity 1 !important
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover
+    opacity 1 !important
 
 .container
   margin-bottom 15px
