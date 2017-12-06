@@ -10,21 +10,26 @@
     font-size 1.05rem
     font-family 'Raleway', sans-serif
 
-#carousel
-  // background-color $primary-color
-  .carousel-slide-changer
-    cursor pointer
-  .carousel-item
-    text-align center
-    // img
-    //   width 100%
-  .carousel-control-prev,
-  .carousel-control-next
-    width 10%
-    opacity 1 !important
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover
-    opacity 1 !important
+.carousel
+  background-color $primary-color
+  height 500px
+  .carousel-inner
+    height inherit
+    .carousel-item
+      height inherit
+      text-align center
+      img
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        width 100%
+        height auto
+    .carousel-control-prev,
+    .carousel-control-next
+      width 10%
+    .carousel-slide-changer
+      cursor pointer
 
 .container
   margin-bottom 15px
@@ -40,3 +45,12 @@
       font-size 2.3rem
     p, span, ul
       font-size 1.12rem
+
+screenSize = 900px
+imgsHeight = 500px
+for _ in (1..23)
+  @media only screen and (max-width: screenSize)
+    .carousel
+      height imgsHeight
+  screenSize -= 20px
+  imgsHeight -= 15px
