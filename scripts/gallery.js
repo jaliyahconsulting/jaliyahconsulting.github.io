@@ -16,9 +16,9 @@ const gallery = {
   createImages() {
     // gallery
     this.images
-      .map(({ src, description, credit }) => {
+      .map(({ name, src, description, credit }) => {
         const container = $('<div class="hover-img-container">');
-        const img = $(`<img src="${src}" />`);
+        const img = $(`<img src="${src}" alt="${name}" />`);
         const desc = $('<div class="description">').text(description);
 
         if (credit) {
@@ -34,9 +34,9 @@ const gallery = {
 
     // bottom select
     this.images
-      .map(({ src }) => {
+      .map(({ name, src }) => {
         const container = $('<div class="bottom-image">');
-        const img = $(`<img src="${src}" />`);
+        const img = $(`<img src="${src}" alt="${name}" />`);
         return container.append(img);
       })
       .map((c, i) => i === 0 ? c.addClass('bottom-current first-img') : c)
@@ -136,7 +136,7 @@ const gallery = {
 
 $(() =>
   $.getJSON(
-    'resources/gallery.json',
-    ({ images }) => gallery.init(images)
+    'resources/images.json',
+    json => gallery.init(json.gallery)
   )
 );
