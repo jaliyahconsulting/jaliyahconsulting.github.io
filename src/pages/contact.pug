@@ -15,26 +15,32 @@ html
       .container(ontouchstart="")
         .submitted Thank you for contacting Jáliyah! We will get back to you soon.
         form.form(action="https://formspree.io/jaliyahconsulting@gmail.com", method="post")
-          .form-group
-            label First Name
-            input.form-control(type="text" name="first_name")
-
-          .form-group
-            label Last Name
-            input.form-control(type="text", name="last_name")
-
-          .form-group
-            label Phone Number
-            input.form-control(type="tel", name="phone_number")
-
-          .form-group
-            label Email
-            input.form-control(type="text", name="email")
-
+          .names.row
+            .form-group.col-6
+              label First Name
+              input.form-control(type="text" name="first_name")
+            .form-group.col-6
+              label Last Name
+              input.form-control(type="text", name="last_name")
+          .phone.row
+            .form-group.col-8
+              label Phone Number
+              input.form-control(type="tel", name="phone_number")
+            .check.form-group.col-4
+              label.form-check-label
+                input.form-check-input(type="checkbox" value="" name="phone_prefered")
+                span Phone is my prefered form of contact.
+          .email.row
+            .form-group.col-8
+              label Email
+              input.form-control(type="text", name="email")
+            .check.form-group.col-4
+              label.form-check-label
+                input.form-check-input(type="checkbox" value="" name="email_prefered")
+                span Email is my prefered form of contact.
           .form-group
             label Comment
             textarea.form-control(type="text", name="comment")
-
           .form-group.row
             .col-md-6
               button.btn.btn-primary.reset(type="reset") Reset
