@@ -5,17 +5,38 @@
 
 .resources
   margin 0 auto
-  width 85%
-  .dont-start-me-to-talking
-    img
+  margin-bottom 15px
+  width 95%
+  display-flex-vender()
+  .filter
+    width 135px
+    .btn-primary
+      boxShadow()
       width 100%
-      height auto
-  .card
-    margin-bottom 15px
-    .card-title a
-      color $primary-color
-    .card-title, .card-text
-      font-family 'Raleway', sans-serif
+      margin-bottom 7px
+  .selected
+    background-color #fff
+    color $primary-color
+  .content
+    width 100%
+    padding-left 20px
+    .card
+      boxShadow()
+      margin-bottom 15px
+      .mediaCol
+        background-image url('resources/loading.gif')
+        background-position center
+        background-repeat no-repeat
+        background-size inherit
+      .image
+        img
+          width 100%
+      .video
+        iframe
+          width 100%
+          min-height 500px
+      .card-title, .card-text
+        font-family 'Raleway', sans-serif
 
 @media only screen and (max-width: 767px)
   .card-text

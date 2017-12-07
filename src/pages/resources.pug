@@ -1,4 +1,3 @@
-// - var dSMTTLink = "https://www.amazon.com/Dont-Start-Me-Talking-Selected/dp/155936419X";
 - var dSMTTLink = "";
 
 doctype html
@@ -7,6 +6,7 @@ html
     title Resources | Jáliyah Consulting
     include ../templates/head
     link(rel="stylesheet", href="resources.css")
+    script(src="scripts/resources.js")
   body
     .page
       include ../templates/nav
@@ -15,19 +15,10 @@ html
           h1 Resources
           span Jáliyah Resources
       .resources(ontouchstart="")
-        .dont-start-me-to-talking.card
-          .card-body
-            h4.card-title
-              a(href=dSMTTLink, target="_blank") Don't Start Me To Talking...
-            hr
-            .row
-              .col-md-4
-                div
-                  a(href=dSMTTLink, target="_blank")
-                    img(src="images/dont-start-me-to-talking.jpg", alt="Don't Start Me To Talking...")
-              .col-md-8
-                div
-                  p.card-text
-                    | My father John O'Neal published the book
-                    | <i>Don't Start Me To Talking...</i>.
+        .filter
+          button.btn.btn-primary#people People
+          button.btn.btn-primary#books Books
+          button.btn.btn-primary#videos Videos
+          button.btn.btn-primary#organizations Organizations
+        .content
     include ../templates/footer
