@@ -59,7 +59,7 @@ const content = {
       "title": "Junebug Productions",
       "text": "Junebug Productions has been with me for a long time. Check out their website here: <a href=\"https://junebugproductions.org/\">https://junebugproductions.org/</a>",
       "image": {
-        "src": "resources/websites/junebug-productions.jpeg",
+        "src": "resources/websites/junebug-productions.png",
         "href": "https://junebugproductions.org/",
         "alt": "Junebug Productions's website"
       }
@@ -80,6 +80,15 @@ const content = {
         "src": "resources/websites/highlander-center.png",
         "href": "http://highlandercenter.org/",
         "alt": "Highlander Center's website"
+      }
+    },
+    {
+      "title": "Southerners On New Ground (SONG)",
+      "text": "Southerners On New Ground is a great organization. Head on over to their website here: <a href=\"http://southernersonnewground.org/\">http://southernersonnewground.org/</a>",
+      "image": {
+        "src": "resources/websites/southerners-on-new-ground.png",
+        "href": "http://southernersonnewground.org/",
+        "alt": "Southerners On New Ground's website"
       }
     },
   ]
