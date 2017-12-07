@@ -18,7 +18,7 @@
     background-color #fff
     color $primary-color
   .content
-    width 100%
+    width auto
     padding-left 20px
     .card
       boxShadow()
@@ -39,5 +39,43 @@
         font-family 'Raleway', sans-serif
 
 @media only screen and (max-width: 767px)
-  .card-text
-    margin-top 10px
+  .resources
+    display block
+    .filter
+      margin-top 7px
+      display flex
+      position sticky
+      top 0
+      overflow hidden
+      width 100%
+      z-index 1
+      background-color $primary-color
+      .btn
+        background-color inherit
+        color #fff
+        border-radius 0
+        border 0
+        margin-bottom 0
+        box-shadow none
+        -webkit-box-shadow none
+        padding 15px
+    //   .btn
+    //     margin-left 5px
+    //     margin-right 5px
+    // .filter > :first-child
+    //   margin-left 0
+    // .filter > :last-child
+    //   margin-right 0
+    .content
+      padding-left 0
+      .card
+        .card-text
+          margin-top 10px
+        .video iframe
+          min-height 400px
+
+@media only screen and (max-width: 630px)
+  .resources .content
+    .card
+      .video iframe
+        min-height 300px
