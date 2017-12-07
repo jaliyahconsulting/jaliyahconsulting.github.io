@@ -158,7 +158,6 @@ const resources = {
       resources.filterSelected = null;
     } else {
       if (resources.filterSelected) {
-        console.log(resources.filterSelected)
         resources.filterSelected.removeClass('selected');
       }
       resources.filterSelected = clicked;
