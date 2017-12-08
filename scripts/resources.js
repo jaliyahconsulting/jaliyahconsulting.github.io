@@ -61,12 +61,48 @@ const content = {
   ],
   "organizations": [
     {
+      "title": "Black Swan Food Experience",
+      "text": "Check out their website here: <a href=\"http://www.blackswanfoodexperience.com/\">http://www.blackswanfoodexperience.com/</a>",
+      "image": {
+        "src": "resources/websites/black-swan-food-experience.jpeg",
+        "href": "http://www.blackswanfoodexperience.com/",
+        "alt": "Black Swan Food Experience's website"
+      }
+    },
+    {
+      "title": "Congo Square Preservation Society",
+      "text": "Check out their website here: <a href=\"http://www.congosquarepreservationsociety.org/\">http://www.congosquarepreservationsociety.org/</a>",
+      "image": {
+        "src": "resources/websites/congo-square-preservation-society.jpeg",
+        "href": "http://www.congosquarepreservationsociety.org/",
+        "alt": "Congo Square Preservation Society's website"
+      }
+    },
+    {
       "title": "Junebug Productions",
       "text": "Junebug Productions has been with me for a long time. Check out their website here: <a href=\"https://junebugproductions.org/\">https://junebugproductions.org/</a>",
       "image": {
         "src": "resources/websites/junebug-productions.png",
         "href": "https://junebugproductions.org/",
         "alt": "Junebug Productions's website"
+      }
+    },
+    {
+      "title": "Veterans of the Mississippi Civil Rights Movement",
+      "text": "Check out their website here: <a href=\"http://mscivilrightsveterans.com/index.html\">http://mscivilrightsveterans.com/index.html</a>",
+      "image": {
+        "src": "resources/websites/veterans-of-the-mississippi-civil-rights-movement.jpeg",
+        "href": "http://mscivilrightsveterans.com/index.html",
+        "alt": "Veterans of the Mississippi Civil Rights Movement's website"
+      }
+    },
+    {
+      "title": "New Orleans Congress of Racial Equality",
+      "text": "Check out their website here: <a href=\"http://amistadresearchcenter.tulane.edu/archon/?p=digitallibrary/digitalcontent&id=81\">http://amistadresearchcenter.tulane.edu/archon/?p=digitallibrary/digitalcontent&id=81</a>",
+      "image": {
+        "src": "resources/websites/new-orleans-congress-of-racial-equality.jpeg",
+        "href": "http://amistadresearchcenter.tulane.edu/archon/?p=digitallibrary/digitalcontent&id=81",
+        "alt": "New Orleans Congress of Racial Equality's website"
       }
     },
     {
@@ -96,6 +132,15 @@ const content = {
         "alt": "Southerners On New Ground's website"
       }
     },
+    // {
+    //   "title": "",
+    //   "text": "Check out their website here: <a href=\"\"></a>",
+    //   "image": {
+    //     "src": "resources/websites/.",
+    //     "href": "",
+    //     "alt": "'s website"
+    //   }
+    // },
   ]
 };
 
