@@ -21,8 +21,13 @@ const content = {
       }
     },
     {
-      "title": "Hiroka (Hero) Mcrae",
-      "text": "Hero is a extremely talented dancer . You can visit her on facebook here: <a href=\"https://www.facebook.com/hiroka.mcrae.7\">https://www.facebook.com/hiroka.mcrae.7</a>",
+      "title": "Kiyoko Mccrae",
+      "text": "Kiyoko Mccrae is an amazing photographer. You can visit her on website here: <a href=\"http://www.kiyokomccrae.com/\">http://www.kiyokomccrae.com/</a>",
+      "image": {
+        "src": "resources/websites/kiyoko-mccrae.jpeg",
+        "href": "http://www.kiyokomccrae.com/",
+        "alt": "Kiyoko Mccrae's Website"
+      }
     },
   ],
   "books": [
@@ -47,7 +52,7 @@ const content = {
     },
     {
       "title": "John O'Neal Performance and Social Change - USA",
-      "text": "My father speaking.",
+      "text": "My father speaking on the importance of listening to each other and how story circles facilate that.",
       "video": {
         "link": "https://www.youtube.com/watch?v=evv64tv8cYQ",
         "embedded": "https://www.youtube.com/embed/evv64tv8cYQ"
